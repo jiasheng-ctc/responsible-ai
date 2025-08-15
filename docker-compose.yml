@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  ai-security-challenge:
+    build: .
+    ports:
+      - "8050:8050"
+    volumes:
+      - ./assets:/app/assets
+    restart: unless-stopped
+    container_name: ai-security-challenge
